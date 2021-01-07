@@ -1,20 +1,20 @@
-title: # a name for your Learning Lab course
-tagline: # a short description for your Learning Lab course, displayed on the course catalog
-description: # a longer description for your Learning Lab course, displayed on the course's landing page
+title: nanohub simple jupyter tool
+tagline: Learn nanohub jupyter tool 
+description: Learn to build a simple nanohub tool with jupyter notebook
 
 # Repository setup
 # The following section template information for the repository
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name: # the name of the repository when it is created for the learner
-  repo: # the name of the template repository from which to clone for the learner
+  name: toolstart-jupyter
+  repo: toolstart-jupyter
 
 # `before` block
 # Actions to take place after the learner registers, but before they start interacting with their repo
 
-before:
-- type: # the type of action, full list at https://lab.github.com/docs/actions/
+#before:
+#- type: # the type of action, full list at https://lab.github.com/docs/actions/
   # some actions require additional options, those should appear below `type:`
   # you can execute multiple actions in the `before` block
 
@@ -24,7 +24,7 @@ before:
 
 steps:
 # Step 1: INTERNAL COMMENT DESCRIBING STEP 
-- title: nanohub-simple-jupyter-tool
+- title: Set up your project
   description: a skleton course for jupyter tool
   #event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   #actions: # a list of the actions that will occur when the step is triggered by an event
