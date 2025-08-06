@@ -6,7 +6,7 @@
 # 2)  cadet-ff        ← the tool alias you picked in the Tool Pipeline
 # 3)  anaconda-6      ← keep unless you need a different nanoHUB environment
 
-/usr/bin/invoke_app "$@" -C "start_jupyter -t cadetff -A -T @tool cadet_ff.ipynb" \
+/usr/bin/invoke_app "$@" -C "start_jupyter -t cadetff -A -T @tool CADeT.ipynb" \
     -t cadetff \
     -u anaconda-6
 
