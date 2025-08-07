@@ -1,28 +1,9 @@
----
-# -------- basic metadata --------
-name   : CADeT-FF                       # title in the nanoHUB header
-invoke : middleware/invoke              # entry point above
-icon   : src/icon.png                  # optional – delete if no icon
-
-# -------- runtime environment --------
-modules:
-  - anaconda-6                         # Python + pip
-  - jupyter/2023.08                    # provides start_jupyter helper
-
-# -------- (optional) pre-bake your pip deps --------
-# Comment out if you prefer the notebook’s first cell to do the installs.
-# pip:
-#   - "numpy<2.0"
-#   - matgl
-#   - "dgl -f https://data.dgl.ai/wheels/torch-2.4/repo.html"
-#   - mp_api
-#   - pymatgen
-#   - ase
-#   - doped==3.0.0
-
-# -------- files that must ship with the tool --------
-copy:
-  - CADeT.ipynb
-  - src/                               # any helper scripts / data
-  - LICENSE
-  - README.md
+tool:
+  name: cadetff
+  title: CADeT‑FF: Accelerated Modeling of Defect Thermodynamics
+  tool_type: jupyter
+  main: CADeT.ipynb
+  description: |
+    A Jupyter notebook-based tool for modeling defect thermodynamics in CdSeTe solar cells.
+  author: Habibur Rahman
+  license: MIT
