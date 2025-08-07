@@ -1,59 +1,28 @@
-title: nanohub simple jupyter tool
-tagline: Learn nanohub jupyter tool 
-description: Learn to build a simple nanohub tool with jupyter notebook
+---
+# -------- basic metadata --------
+name   : CADeT-FF                       # title in the nanoHUB header
+invoke : middleware/invoke              # entry point above
+icon   : src/icon.png                  # optional – delete if no icon
 
-# Repository setup
-# The following section template information for the repository
-# This will be used when the repository is crated for each individual learner
+# -------- runtime environment --------
+modules:
+  - anaconda-6                         # Python + pip
+  - jupyter/2023.08                    # provides start_jupyter helper
 
-template:
-  name: toolstart-jupyter
-  repo: toolstart-jupyter
+# -------- (optional) pre-bake your pip deps --------
+# Comment out if you prefer the notebook’s first cell to do the installs.
+# pip:
+#   - "numpy<2.0"
+#   - matgl
+#   - "dgl -f https://data.dgl.ai/wheels/torch-2.4/repo.html"
+#   - mp_api
+#   - pymatgen
+#   - ase
+#   - doped==3.0.0
 
-# `before` block
-# Actions to take place after the learner registers, but before they start interacting with their repo
-
-#before:
-#- type: # the type of action, full list at https://lab.github.com/docs/actions/
-  # some actions require additional options, those should appear below `type:`
-  # you can execute multiple actions in the `before` block
-
-# Steps for the course
-# A list of steps that take the learner through the course
-# Create one step for each action that a learner will complete
-
-steps:
-# Step 1: INTERNAL COMMENT DESCRIBING STEP 
-- title: Set up your project
-  description: a skleton course for jupyter tool
-  event: push
-  #actions: # a list of the actions that will occur when the step is triggered by an event
-  #- type: # the type of action, full list at https://lab.github.com/docs/actions
-
-# Step 2: INTERNAL COMMENT FOR STEP 2
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
-# Step 3: INTERNAL COMMENT FOR STEP 3
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
-# Step 4: INTERNAL COMMENT FOR STEP 4
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
-# Step 5: INTERNAL COMMENT FOR STEP 5
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# -------- files that must ship with the tool --------
+copy:
+  - CADeT.ipynb
+  - src/                               # any helper scripts / data
+  - LICENSE
+  - README.md
