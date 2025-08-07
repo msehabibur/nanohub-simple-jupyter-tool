@@ -1,12 +1,10 @@
 #!/bin/sh
-# Launch your nanoHUB tool.
-# Remove the “-A” flag if you want users to execute the notebook manually.
+# nanoHUB launcher – opens CADeT.ipynb in regular notebook mode
+# If you ever want “app-mode” (auto-run on launch) add the -A flag to start_jupyter.
 
-# 1)  cadet_ff.ipynb  ← exact notebook filename in the repo
-# 2)  cadet-ff        ← the tool alias you picked in the Tool Pipeline
-# 3)  anaconda-6      ← keep unless you need a different nanoHUB environment
+exec /usr/bin/invoke_app "$@" \
+     -C "start_jupyter -t cadetff -T @tool CADeT.ipynb" \
+     -t cadetff \
+     -u anaconda-6          # keep this unless you switch to a different nanoHUB env
 
-/usr/bin/invoke_app "$@" -C "start_jupyter -t cadetff -T @tool CADeT.ipynb" \
-    -t cadetff \
-    -u anaconda-6
 
