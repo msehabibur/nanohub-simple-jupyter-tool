@@ -5,4 +5,4 @@
 exec /usr/bin/invoke_app "$@" \
    -C "start_jupyter -T @tool CADeT.ipynb" \
    -t cadetff \
-   -u anaconda-6          # keep this unless you switch to a different nanoHUB env
+   -u anaconda-7          # keep this unless you switch to a different nanoHUB env
