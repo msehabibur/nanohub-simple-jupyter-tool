@@ -1,0 +1,4 @@
+O_i+As_i+O_i
+Cu_i+Cu_i
+V_Cd
+As_Te
