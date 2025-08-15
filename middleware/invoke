@@ -1,5 +1,3 @@
-It looks like the issue is your invoke script, try changing it to this:
-
 #!/bin/sh
 # nanoHUB launcher ? opens CADeT.ipynb in regular notebook mode
 # If you ever want ?app-mode? (auto-run on launch) add the -A flag to start_jupyter.
